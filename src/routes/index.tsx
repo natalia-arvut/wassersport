@@ -76,7 +76,7 @@ function Index() {
           <p className="text-gold text-[11px] font-bold uppercase tracking-[0.3em] mb-6">
             Sailingschool Lang in Stäfa and Zurich — Since 1982
           </p>
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl mb-8 leading-[1.05] font-medium tracking-tight">
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6 leading-[1.1] font-medium tracking-tight">
             Intensivecourse in 9 days for 1 person
           </h1>
           <p className={`text-gold text-2xl md:text-4xl font-serif font-semibold mb-10 ${NUMS}`}>
@@ -163,7 +163,7 @@ function Index() {
 
       {/* Theory */}
       <section id="theory" className={`py-24 md:py-32 ${CONTAINER}`}>
-        <div className="grid md:grid-cols-[1.3fr_1fr] gap-12 md:gap-16 items-start">
+        <div className="grid md:grid-cols-[1.1fr_1fr] gap-12 md:gap-16 items-stretch">
           <div>
             <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
               Step 01
@@ -206,12 +206,12 @@ function Index() {
               And now get in touch with us!
             </p>
           </div>
-          <figure className="md:sticky md:top-24">
+          <figure className="relative min-h-[320px] overflow-hidden md:min-h-0">
             <img
               src={helmWheelAsset.url}
               alt="Wooden helm wheel with brass compass on a sailing yacht"
               loading="lazy"
-              className="w-full aspect-[5/4] object-cover max-h-[420px]"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </figure>
         </div>
