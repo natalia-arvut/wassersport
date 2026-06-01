@@ -162,11 +162,77 @@ function Index() {
 
 
       {/* Theory */}
-      <section id="theory" className={`py-24 md:py-32 ${CONTAINER}`}>
+      <section id="theory" className={`scroll-mt-24 py-24 md:py-32 ${CONTAINER}`}>
+        <div className="mb-10">
+          <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
+            Step 01
+          </span>
+          <h2 className="font-serif text-3xl md:text-5xl mt-5 leading-tight">Theory</h2>
+        </div>
         <div className="grid md:grid-cols-[1.1fr_1fr] gap-12 md:gap-16 items-stretch">
-          <div>
+          <div className="flex flex-col">
+            <ul className="flex-1 space-y-5 text-[15px] text-navy/80 leading-relaxed border-l-2 border-gold pl-6">
+              <li>Theory tests are generally written in your residence canton.</li>
+              <li>
+                Please fulfill the{" "}
+                <a
+                  href="http://sail.ch/wp-content/uploads/2020/12/SFO324SIFU202008-6.pdf"
+                  className="text-navy underline decoration-gold underline-offset-4 hover:text-gold"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  registration form
+                </a>{" "}
+                as soon as possible.
+              </li>
+              <li>
+                For enrollment an official eye test and confirmation from your residence community
+                office are necessary.
+              </li>
+              <li>
+                Segelschule Lang will advise individuals regarding registration formalities, our
+                previous experience with certification formalities takes approximately 4 weeks.
+              </li>
+              <li>
+                <a
+                  href="https://www.boatdriver.ch/e/e-learning"
+                  className="text-navy underline decoration-gold underline-offset-4 hover:text-gold"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Order the questions and the theory in English if necessary.
+                </a>
+              </li>
+            </ul>
+            <p className="mt-10 text-sm font-bold uppercase tracking-[0.2em] text-navy">
+              And now get in touch with us!
+            </p>
+          </div>
+          <figure className="relative min-h-[320px] overflow-hidden md:min-h-0">
+            <img
+              src={helmWheelAsset.url}
+              alt="Wooden helm wheel with brass compass on a sailing yacht"
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </figure>
+        </div>
+      </section>
+
+
+      {/* One Week Offer */}
+      <section id="week" className="relative bg-navy text-white py-24 md:py-32 overflow-hidden">
+        <img
+          src={sailRopesAsset.url}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/95 to-navy/80" />
+        <div className={`relative ${CONTAINER}`}>
             <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
-              Step 01
+              Step 02
             </span>
             <h2 className="font-serif text-3xl md:text-5xl mt-5 mb-10 leading-tight">Theory</h2>
             <ul className="space-y-5 text-[15px] text-navy/80 leading-relaxed border-l-2 border-gold pl-6">
