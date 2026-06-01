@@ -39,18 +39,7 @@ const CONTAINER = "max-w-6xl mx-auto px-6 md:px-12";
 function Index() {
   return (
     <div className="min-h-screen bg-background text-navy">
-      {/* Top bar */}
-      <div className="bg-navy text-white text-[11px] tracking-[0.18em] uppercase px-6 md:px-12 py-3 flex flex-col md:flex-row gap-2 md:gap-8 items-center justify-center text-center">
-        <span>Wassersport &amp; Reise GmbH · Dorfstrasse 33, 8849 Alpthal</span>
-        <span className="hidden md:inline text-gold">·</span>
-        <a href="tel:+41449281818" className={`hover:text-gold transition-colors ${NUMS}`}>
-          +41 44 928 18 18
-        </a>
-        <span className="hidden md:inline text-gold">·</span>
-        <a href="mailto:info@sail.ch" className="hover:text-gold transition-colors">
-          info@sail.ch
-        </a>
-      </div>
+
 
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md flex items-center justify-between px-6 md:px-12 py-5 border-b border-navy/5">
@@ -116,8 +105,8 @@ function Index() {
 
       {/* Intro */}
       <section className={`py-24 md:py-32 ${CONTAINER}`}>
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <div>
+        <div className="grid md:grid-cols-[1.1fr_1fr] gap-12 md:gap-16 items-stretch">
+          <div className="flex flex-col justify-center">
             <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
               Established 1982
             </span>
@@ -135,94 +124,98 @@ function Index() {
               license).
             </p>
           </div>
-          <div>
+          <figure className="relative">
             <img
               src={beatLangAsset.url}
               alt="Beat Lang — founder of Segelschule Lang"
               loading="lazy"
-              className="w-full aspect-[3/2] object-cover"
+              className="w-full h-full max-h-[640px] aspect-[3/4] object-cover object-center"
             />
-            <p className="mt-3 text-[11px] uppercase tracking-[0.2em] text-navy/50">
+            <figcaption className="mt-3 text-[11px] uppercase tracking-[0.2em] text-navy/50">
               Beat Lang · Founder
-            </p>
-          </div>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
       {/* Exam overview */}
       <section className="bg-sand py-24 md:py-28 px-6 md:px-12">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-16 items-center">
+        <div className="max-w-3xl mx-auto text-center">
+          <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
+            Sailing courses Zürichsee
+          </span>
+          <h2 className="font-serif text-2xl md:text-4xl mt-5 mb-8 leading-tight">
+            Boat license Switzerland — cheap, for dummies and beginners.
+          </h2>
+          <p className="text-navy/75 leading-relaxed mb-6 text-[15px]">
+            To get to the exam qualification you need approx. 20 units (1.5 h) including the exam.
+            You need to absolve a theoretical part and the practical part. We help you through both
+            of the exam.
+          </p>
+          <p className="text-navy/75 leading-relaxed text-[15px]">
+            For quick certified sailing lessons, Segelschule Lang will plan the approach to your
+            course to suite your personal needs.
+          </p>
+        </div>
+      </section>
+
+
+      {/* Theory */}
+      <section id="theory" className={`py-24 md:py-32 ${CONTAINER}`}>
+        <div className="grid md:grid-cols-[1.3fr_1fr] gap-12 md:gap-16 items-start">
           <div>
             <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
-              Sailing courses Zürichsee
+              Step 01
             </span>
-            <h2 className="font-serif text-2xl md:text-4xl mt-5 mb-8 leading-tight">
-              Boat license Switzerland — cheap, for dummies and beginners.
-            </h2>
-            <p className="text-navy/75 leading-relaxed mb-6 text-[15px]">
-              To get to the exam qualification you need approx. 20 units (1.5 h) including the exam.
-              You need to absolve a theoretical part and the practical part. We help you through both
-              of the exam.
-            </p>
-            <p className="text-navy/75 leading-relaxed text-[15px]">
-              For quick certified sailing lessons, Segelschule Lang will plan the approach to your
-              course to suite your personal needs.
+            <h2 className="font-serif text-3xl md:text-5xl mt-5 mb-10 leading-tight">Theory</h2>
+            <ul className="space-y-5 text-[15px] text-navy/80 leading-relaxed border-l-2 border-gold pl-6">
+              <li>Theory tests are generally written in your residence canton.</li>
+              <li>
+                Please fulfill the{" "}
+                <a
+                  href="http://sail.ch/wp-content/uploads/2020/12/SFO324SIFU202008-6.pdf"
+                  className="text-navy underline decoration-gold underline-offset-4 hover:text-gold"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  registration form
+                </a>{" "}
+                as soon as possible.
+              </li>
+              <li>
+                For enrollment an official eye test and confirmation from your residence community
+                office are necessary.
+              </li>
+              <li>
+                Segelschule Lang will advise individuals regarding registration formalities, our
+                previous experience with certification formalities takes approximately 4 weeks.
+              </li>
+              <li>
+                <a
+                  href="https://www.boatdriver.ch/e/e-learning"
+                  className="text-navy underline decoration-gold underline-offset-4 hover:text-gold"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Order the questions and the theory in English if necessary.
+                </a>
+              </li>
+            </ul>
+            <p className="mt-10 text-sm font-bold uppercase tracking-[0.2em] text-navy">
+              And now get in touch with us!
             </p>
           </div>
-          <div>
+          <figure className="md:sticky md:top-24">
             <img
               src={helmWheelAsset.url}
               alt="Wooden helm wheel with brass compass on a sailing yacht"
               loading="lazy"
-              className="w-full aspect-square object-cover"
+              className="w-full aspect-[4/5] object-cover"
             />
-          </div>
+          </figure>
         </div>
       </section>
 
-      {/* Theory */}
-      <section id="theory" className={`py-24 md:py-32 ${CONTAINER}`}>
-        <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
-          Step 01
-        </span>
-        <h2 className="font-serif text-3xl md:text-5xl mt-5 mb-10 leading-tight">Theory</h2>
-        <ul className="space-y-5 text-[15px] text-navy/80 leading-relaxed border-l-2 border-gold pl-6 max-w-3xl">
-          <li>Theory tests are generally written in your residence canton.</li>
-          <li>
-            Please fulfill the{" "}
-            <a
-              href="http://sail.ch/wp-content/uploads/2020/12/SFO324SIFU202008-6.pdf"
-              className="text-navy underline decoration-gold underline-offset-4 hover:text-gold"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              registration form
-            </a>{" "}
-            as soon as possible.
-          </li>
-          <li>
-            For enrollment an official eye test and confirmation from your residence community
-            office are necessary.
-          </li>
-          <li>
-            Segelschule Lang will advise individuals regarding registration formalities, our
-            previous experience with certification formalities takes approximately 4 weeks.
-          </li>
-          <li>
-            <a
-              href="https://www.boatdriver.ch/e/e-learning"
-              className="text-navy underline decoration-gold underline-offset-4 hover:text-gold"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Order the questions and the theory in English if necessary.
-            </a>
-          </li>
-        </ul>
-        <p className="mt-10 text-sm font-bold uppercase tracking-[0.2em] text-navy">
-          And now get in touch with us!
-        </p>
-      </section>
 
       {/* One Week Offer */}
       <section id="week" className="relative bg-navy text-white py-24 md:py-32 px-6 md:px-12 overflow-hidden">
@@ -379,9 +372,10 @@ function Index() {
           alt=""
           aria-hidden="true"
           loading="lazy"
-          className="absolute inset-0 w-full h-full object-cover opacity-25"
+          className="absolute inset-0 w-full h-full object-cover opacity-70"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/90 via-navy/80 to-navy" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/60 to-navy/85" />
+
         <div className="relative max-w-6xl mx-auto text-center border-b border-white/10 pb-16">
           <h2 className="font-serif text-3xl md:text-5xl mb-10 leading-tight">
             And now get in touch with us.
