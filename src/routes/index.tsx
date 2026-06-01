@@ -39,18 +39,7 @@ const CONTAINER = "max-w-6xl mx-auto px-6 md:px-12";
 function Index() {
   return (
     <div className="min-h-screen bg-background text-navy">
-      {/* Top bar */}
-      <div className="bg-navy text-white text-[11px] tracking-[0.18em] uppercase px-6 md:px-12 py-3 flex flex-col md:flex-row gap-2 md:gap-8 items-center justify-center text-center">
-        <span>Wassersport &amp; Reise GmbH · Dorfstrasse 33, 8849 Alpthal</span>
-        <span className="hidden md:inline text-gold">·</span>
-        <a href="tel:+41449281818" className={`hover:text-gold transition-colors ${NUMS}`}>
-          +41 44 928 18 18
-        </a>
-        <span className="hidden md:inline text-gold">·</span>
-        <a href="mailto:info@sail.ch" className="hover:text-gold transition-colors">
-          info@sail.ch
-        </a>
-      </div>
+
 
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md flex items-center justify-between px-6 md:px-12 py-5 border-b border-navy/5">
