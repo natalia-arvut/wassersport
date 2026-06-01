@@ -200,12 +200,22 @@ function Index() {
                   Order the questions and the theory in English if necessary.
                 </a>
               </li>
-
-        </ul>
-        <p className="mt-10 text-sm font-bold uppercase tracking-[0.2em] text-navy">
-          And now get in touch with us!
-        </p>
+            </ul>
+            <p className="mt-10 text-sm font-bold uppercase tracking-[0.2em] text-navy">
+              And now get in touch with us!
+            </p>
+          </div>
+          <figure className="md:sticky md:top-24">
+            <img
+              src={helmWheelAsset.url}
+              alt="Wooden helm wheel with brass compass on a sailing yacht"
+              loading="lazy"
+              className="w-full aspect-[4/5] object-cover"
+            />
+          </figure>
+        </div>
       </section>
+
 
       {/* One Week Offer */}
       <section id="week" className="relative bg-navy text-white py-24 md:py-32 px-6 md:px-12 overflow-hidden">
