@@ -34,7 +34,7 @@ export const Route = createFileRoute("/")({
 });
 
 const NUMS = "tabular-nums [font-feature-settings:'tnum','lnum']";
-const CONTAINER = "max-w-6xl mx-auto px-6 md:px-12";
+const CONTAINER = "max-w-[1536px] mx-auto px-6 md:px-12 lg:px-16";
 
 function Index() {
   return (
@@ -104,9 +104,9 @@ function Index() {
       </section>
 
       {/* Intro */}
-      <section className={`py-24 md:py-32 ${CONTAINER}`}>
-        <div className="grid md:grid-cols-[1.1fr_1fr] gap-12 md:gap-16 items-stretch">
-          <div className="flex flex-col justify-center">
+      <section className={`py-20 md:py-28 ${CONTAINER}`}>
+        <div className="grid md:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-stretch">
+          <div className="flex flex-col justify-center max-w-[680px]">
             <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
               Established 1982
             </span>
@@ -124,14 +124,14 @@ function Index() {
               license).
             </p>
           </div>
-          <figure className="relative md:self-center w-full">
+          <figure className="relative min-h-[320px] overflow-hidden md:min-h-0">
             <img
               src={beatLangAsset.url}
               alt="Beat Lang — founder of Segelschule Lang"
               loading="lazy"
-              className="w-full aspect-[4/5] max-h-[460px] object-cover object-center"
+              className="absolute inset-0 h-full w-full object-cover object-center"
             />
-            <figcaption className="mt-3 text-[11px] uppercase tracking-[0.2em] text-navy/50">
+            <figcaption className="absolute bottom-0 left-0 bg-background/90 px-4 py-2 text-[11px] uppercase tracking-[0.2em] text-navy/60">
               Beat Lang · Founder
             </figcaption>
           </figure>
@@ -140,8 +140,8 @@ function Index() {
       </section>
 
       {/* Exam overview */}
-      <section className="bg-sand py-24 md:py-28 px-6 md:px-12">
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="bg-sand py-24 md:py-28">
+        <div className={`${CONTAINER} text-center`}>
           <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
             Sailing courses Zürichsee
           </span>
@@ -219,7 +219,7 @@ function Index() {
 
 
       {/* One Week Offer */}
-      <section id="week" className="relative bg-navy text-white py-24 md:py-32 px-6 md:px-12 overflow-hidden">
+      <section id="week" className="relative bg-navy text-white py-24 md:py-32 overflow-hidden">
         <img
           src={sailRopesAsset.url}
           alt=""
@@ -228,7 +228,7 @@ function Index() {
           className="absolute inset-0 w-full h-full object-cover opacity-15"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/95 to-navy/80" />
-        <div className="relative max-w-6xl mx-auto">
+        <div className={`relative ${CONTAINER}`}>
           <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
             Step 02
           </span>
@@ -348,8 +348,8 @@ function Index() {
       </section>
 
       {/* Individual lessons */}
-      <section id="individual" className="bg-sand py-24 md:py-32 px-6 md:px-12">
-        <div className="max-w-6xl mx-auto">
+      <section id="individual" className="bg-sand py-24 md:py-32">
+        <div className={CONTAINER}>
           <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
             Step 04
           </span>
@@ -367,7 +367,7 @@ function Index() {
       </section>
 
       {/* Footer / Contact */}
-      <footer className="relative bg-navy text-white pt-20 pb-10 px-6 md:px-12 overflow-hidden">
+      <footer className="relative bg-navy text-white pt-20 pb-10 overflow-hidden">
         <img
           src={lakeSunsetAsset.url}
           alt=""
@@ -377,7 +377,7 @@ function Index() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/60 to-navy/85" />
 
-        <div className="relative max-w-6xl mx-auto text-center border-b border-white/10 pb-16">
+        <div className={`relative ${CONTAINER} text-center border-b border-white/10 pb-16`}>
           <h2 className="font-serif text-3xl md:text-5xl mb-10 leading-tight">
             And now get in touch with us.
           </h2>
@@ -405,7 +405,7 @@ function Index() {
             Email us
           </a>
         </div>
-        <div className={`relative max-w-6xl mx-auto pt-8 flex flex-col md:flex-row gap-4 justify-between items-center text-[10px] uppercase tracking-[0.25em] text-white/40 ${NUMS}`}>
+        <div className={`relative ${CONTAINER} pt-8 flex flex-col md:flex-row gap-4 justify-between items-center text-[10px] uppercase tracking-[0.25em] text-white/40 ${NUMS}`}>
           <div>© 1982–2026 Wassersport &amp; Reise GmbH</div>
           <div>sail.ch · Stäfa &amp; Zurich</div>
         </div>
