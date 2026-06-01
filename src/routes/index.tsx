@@ -372,9 +372,10 @@ function Index() {
           alt=""
           aria-hidden="true"
           loading="lazy"
-          className="absolute inset-0 w-full h-full object-cover opacity-25"
+          className="absolute inset-0 w-full h-full object-cover opacity-70"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/90 via-navy/80 to-navy" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/60 to-navy/85" />
+
         <div className="relative max-w-6xl mx-auto text-center border-b border-white/10 pb-16">
           <h2 className="font-serif text-3xl md:text-5xl mb-10 leading-tight">
             And now get in touch with us.
