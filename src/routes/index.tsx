@@ -162,14 +162,16 @@ function Index() {
 
 
       {/* Theory */}
-      <section id="theory" className={`py-24 md:py-32 ${CONTAINER}`}>
+      <section id="theory" className={`scroll-mt-24 py-24 md:py-32 ${CONTAINER}`}>
+        <div className="mb-10">
+          <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
+            Step 01
+          </span>
+          <h2 className="font-serif text-3xl md:text-5xl mt-5 leading-tight">Theory</h2>
+        </div>
         <div className="grid md:grid-cols-[1.1fr_1fr] gap-12 md:gap-16 items-stretch">
-          <div>
-            <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
-              Step 01
-            </span>
-            <h2 className="font-serif text-3xl md:text-5xl mt-5 mb-10 leading-tight">Theory</h2>
-            <ul className="space-y-5 text-[15px] text-navy/80 leading-relaxed border-l-2 border-gold pl-6">
+          <div className="flex flex-col">
+            <ul className="flex-1 space-y-5 text-[15px] text-navy/80 leading-relaxed border-l-2 border-gold pl-6">
               <li>Theory tests are generally written in your residence canton.</li>
               <li>
                 Please fulfill the{" "}
@@ -216,7 +218,6 @@ function Index() {
           </figure>
         </div>
       </section>
-
 
       {/* One Week Offer */}
       <section id="week" className="relative bg-navy text-white py-24 md:py-32 overflow-hidden">
