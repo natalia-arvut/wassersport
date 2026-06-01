@@ -34,7 +34,7 @@ export const Route = createFileRoute("/")({
 });
 
 const NUMS = "tabular-nums [font-feature-settings:'tnum','lnum']";
-const CONTAINER = "max-w-[1536px] mx-auto px-6 md:px-12 lg:px-16";
+const CONTAINER = "max-w-[1240px] mx-auto px-6 md:px-10 lg:px-12";
 
 function Index() {
   return (
@@ -76,7 +76,7 @@ function Index() {
           <p className="text-gold text-[11px] font-bold uppercase tracking-[0.3em] mb-6">
             Sailingschool Lang in Stäfa and Zurich — Since 1982
           </p>
-          <h1 className="font-serif text-3xl md:text-5xl mb-6 leading-[1.15] font-medium">
+          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl mb-8 leading-[1.05] font-medium tracking-tight">
             Intensivecourse in 9 days for 1 person
           </h1>
           <p className={`text-gold text-2xl md:text-4xl font-serif font-semibold mb-10 ${NUMS}`}>
@@ -211,7 +211,7 @@ function Index() {
               src={helmWheelAsset.url}
               alt="Wooden helm wheel with brass compass on a sailing yacht"
               loading="lazy"
-              className="w-full aspect-[4/5] object-cover"
+              className="w-full aspect-[5/4] object-cover max-h-[420px]"
             />
           </figure>
         </div>
