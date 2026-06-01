@@ -162,42 +162,45 @@ function Index() {
 
       {/* Theory */}
       <section id="theory" className={`py-24 md:py-32 ${CONTAINER}`}>
-        <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
-          Step 01
-        </span>
-        <h2 className="font-serif text-3xl md:text-5xl mt-5 mb-10 leading-tight">Theory</h2>
-        <ul className="space-y-5 text-[15px] text-navy/80 leading-relaxed border-l-2 border-gold pl-6 max-w-3xl">
-          <li>Theory tests are generally written in your residence canton.</li>
-          <li>
-            Please fulfill the{" "}
-            <a
-              href="http://sail.ch/wp-content/uploads/2020/12/SFO324SIFU202008-6.pdf"
-              className="text-navy underline decoration-gold underline-offset-4 hover:text-gold"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              registration form
-            </a>{" "}
-            as soon as possible.
-          </li>
-          <li>
-            For enrollment an official eye test and confirmation from your residence community
-            office are necessary.
-          </li>
-          <li>
-            Segelschule Lang will advise individuals regarding registration formalities, our
-            previous experience with certification formalities takes approximately 4 weeks.
-          </li>
-          <li>
-            <a
-              href="https://www.boatdriver.ch/e/e-learning"
-              className="text-navy underline decoration-gold underline-offset-4 hover:text-gold"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Order the questions and the theory in English if necessary.
-            </a>
-          </li>
+        <div className="grid md:grid-cols-[1.3fr_1fr] gap-12 md:gap-16 items-start">
+          <div>
+            <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
+              Step 01
+            </span>
+            <h2 className="font-serif text-3xl md:text-5xl mt-5 mb-10 leading-tight">Theory</h2>
+            <ul className="space-y-5 text-[15px] text-navy/80 leading-relaxed border-l-2 border-gold pl-6">
+              <li>Theory tests are generally written in your residence canton.</li>
+              <li>
+                Please fulfill the{" "}
+                <a
+                  href="http://sail.ch/wp-content/uploads/2020/12/SFO324SIFU202008-6.pdf"
+                  className="text-navy underline decoration-gold underline-offset-4 hover:text-gold"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  registration form
+                </a>{" "}
+                as soon as possible.
+              </li>
+              <li>
+                For enrollment an official eye test and confirmation from your residence community
+                office are necessary.
+              </li>
+              <li>
+                Segelschule Lang will advise individuals regarding registration formalities, our
+                previous experience with certification formalities takes approximately 4 weeks.
+              </li>
+              <li>
+                <a
+                  href="https://www.boatdriver.ch/e/e-learning"
+                  className="text-navy underline decoration-gold underline-offset-4 hover:text-gold"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Order the questions and the theory in English if necessary.
+                </a>
+              </li>
+
         </ul>
         <p className="mt-10 text-sm font-bold uppercase tracking-[0.2em] text-navy">
           And now get in touch with us!
