@@ -105,8 +105,8 @@ function Index() {
 
       {/* Intro */}
       <section className={`py-24 md:py-32 ${CONTAINER}`}>
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <div>
+        <div className="grid md:grid-cols-[1.1fr_1fr] gap-12 md:gap-16 items-stretch">
+          <div className="flex flex-col justify-center">
             <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
               Established 1982
             </span>
@@ -124,50 +124,41 @@ function Index() {
               license).
             </p>
           </div>
-          <div>
+          <figure className="relative">
             <img
               src={beatLangAsset.url}
               alt="Beat Lang — founder of Segelschule Lang"
               loading="lazy"
-              className="w-full aspect-[3/2] object-cover"
+              className="w-full h-full max-h-[640px] aspect-[3/4] object-cover object-center"
             />
-            <p className="mt-3 text-[11px] uppercase tracking-[0.2em] text-navy/50">
+            <figcaption className="mt-3 text-[11px] uppercase tracking-[0.2em] text-navy/50">
               Beat Lang · Founder
-            </p>
-          </div>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
       {/* Exam overview */}
       <section className="bg-sand py-24 md:py-28 px-6 md:px-12">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-16 items-center">
-          <div>
-            <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
-              Sailing courses Zürichsee
-            </span>
-            <h2 className="font-serif text-2xl md:text-4xl mt-5 mb-8 leading-tight">
-              Boat license Switzerland — cheap, for dummies and beginners.
-            </h2>
-            <p className="text-navy/75 leading-relaxed mb-6 text-[15px]">
-              To get to the exam qualification you need approx. 20 units (1.5 h) including the exam.
-              You need to absolve a theoretical part and the practical part. We help you through both
-              of the exam.
-            </p>
-            <p className="text-navy/75 leading-relaxed text-[15px]">
-              For quick certified sailing lessons, Segelschule Lang will plan the approach to your
-              course to suite your personal needs.
-            </p>
-          </div>
-          <div>
-            <img
-              src={helmWheelAsset.url}
-              alt="Wooden helm wheel with brass compass on a sailing yacht"
-              loading="lazy"
-              className="w-full aspect-square object-cover"
-            />
-          </div>
+        <div className="max-w-3xl mx-auto text-center">
+          <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
+            Sailing courses Zürichsee
+          </span>
+          <h2 className="font-serif text-2xl md:text-4xl mt-5 mb-8 leading-tight">
+            Boat license Switzerland — cheap, for dummies and beginners.
+          </h2>
+          <p className="text-navy/75 leading-relaxed mb-6 text-[15px]">
+            To get to the exam qualification you need approx. 20 units (1.5 h) including the exam.
+            You need to absolve a theoretical part and the practical part. We help you through both
+            of the exam.
+          </p>
+          <p className="text-navy/75 leading-relaxed text-[15px]">
+            For quick certified sailing lessons, Segelschule Lang will plan the approach to your
+            course to suite your personal needs.
+          </p>
         </div>
       </section>
+
 
       {/* Theory */}
       <section id="theory" className={`py-24 md:py-32 ${CONTAINER}`}>
