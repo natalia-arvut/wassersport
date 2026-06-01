@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImage from "@/assets/hero-lake-zurich.jpg";
 import beatLangAsset from "@/assets/beat-lang.jpg.asset.json";
+import lakeSunsetAsset from "@/assets/lake-sunset-sails.jpg.asset.json";
+import sailRopesAsset from "@/assets/sail-ropes-detail.jpg.asset.json";
+import helmWheelAsset from "@/assets/helm-wheel.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -23,21 +26,24 @@ export const Route = createFileRoute("/")({
     links: [
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap",
       },
     ],
   }),
   component: Index,
 });
 
+const NUMS = "tabular-nums [font-feature-settings:'tnum','lnum']";
+const CONTAINER = "max-w-6xl mx-auto px-6 md:px-12";
+
 function Index() {
   return (
     <div className="min-h-screen bg-background text-navy">
       {/* Top bar */}
-      <div className="bg-navy text-white text-[11px] tracking-[0.18em] uppercase px-6 md:px-10 py-3 flex flex-col md:flex-row gap-2 md:gap-8 items-center justify-center text-center">
+      <div className="bg-navy text-white text-[11px] tracking-[0.18em] uppercase px-6 md:px-12 py-3 flex flex-col md:flex-row gap-2 md:gap-8 items-center justify-center text-center">
         <span>Wassersport &amp; Reise GmbH · Dorfstrasse 33, 8849 Alpthal</span>
         <span className="hidden md:inline text-gold">·</span>
-        <a href="tel:+41449281818" className="hover:text-gold transition-colors">
+        <a href="tel:+41449281818" className={`hover:text-gold transition-colors ${NUMS}`}>
           +41 44 928 18 18
         </a>
         <span className="hidden md:inline text-gold">·</span>
@@ -47,7 +53,7 @@ function Index() {
       </div>
 
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md flex items-center justify-between px-6 md:px-10 py-5 border-b border-navy/5">
+      <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md flex items-center justify-between px-6 md:px-12 py-5 border-b border-navy/5">
         <a href="#" className="text-xl md:text-2xl font-serif font-bold tracking-tight text-navy">
           Sailingschool Lang
         </a>
@@ -75,22 +81,27 @@ function Index() {
           height={1280}
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-navy/50" />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/40 via-transparent to-navy/70" />
-        <div className="relative z-10 text-center text-white px-6 max-w-4xl py-24">
+        <div className="absolute inset-0 bg-navy/55" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/40 via-transparent to-navy/75" />
+        <div className="relative z-10 text-center text-white px-6 max-w-5xl py-24">
           <p className="text-gold text-[11px] font-bold uppercase tracking-[0.3em] mb-6">
             Sailingschool Lang in Stäfa and Zurich — Since 1982
           </p>
-          <h1 className="font-serif text-4xl md:text-6xl mb-10 leading-[1.1]">
+          <h1 className="font-serif text-3xl md:text-5xl mb-6 leading-[1.15] font-medium">
             Intensivecourse in 9 days for 1 person
-            <br />
-            <span className="italic text-gold">only CHF 1'499.00</span>
           </h1>
-          <div className="space-y-2 text-base md:text-lg font-light text-white/90 mb-10">
-            <p><strong className="text-white">Intensivecourse in 14 days for 2 persons</strong> — CHF 2'699.00</p>
-            <p><strong className="text-white">Intensivecourse in 21 days for 3 persons</strong> — CHF 3'699.00</p>
+          <p className={`text-gold text-2xl md:text-4xl font-serif font-semibold mb-10 ${NUMS}`}>
+            only CHF 1&apos;499.00
+          </p>
+          <div className={`space-y-2 text-base md:text-lg font-light text-white/90 mb-10 ${NUMS}`}>
+            <p>
+              <strong className="text-white font-semibold">Intensivecourse in 14 days for 2 persons</strong> — CHF 2&apos;699.00
+            </p>
+            <p>
+              <strong className="text-white font-semibold">Intensivecourse in 21 days for 3 persons</strong> — CHF 3&apos;699.00
+            </p>
           </div>
-          <div className="text-sm text-white/70 max-w-xl mx-auto space-y-1 mb-10">
+          <div className={`text-sm text-white/70 max-w-xl mx-auto space-y-1 mb-10 ${NUMS}`}>
             <p>incl. insurance (CHF 80.00)</p>
             <p>incl. preparation of the exam, use of the ship during the exam, crew (CHF 280.00)</p>
           </div>
@@ -104,7 +115,7 @@ function Index() {
       </section>
 
       {/* Intro */}
-      <section className="py-24 md:py-32 px-6 md:px-10 max-w-7xl mx-auto">
+      <section className={`py-24 md:py-32 ${CONTAINER}`}>
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div>
             <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
@@ -116,7 +127,7 @@ function Index() {
             <p className="text-navy/75 leading-relaxed mb-5 text-[15px]">
               Established by Beat Lang in 1982 — Segelschule Lang, with his passion for teaching
               various water sports. No previous sailing knowledge required, as a newbie to sailing
-              you will learn the ABC's of sailing.
+              you will learn the ABC&apos;s of sailing.
             </p>
             <p className="text-navy/75 leading-relaxed text-[15px]">
               We teach both theory and practical techniques fast and professionally. As a result you
@@ -127,9 +138,9 @@ function Index() {
           <div>
             <img
               src={beatLangAsset.url}
-              alt="Beat Lang — founder of Segelschule Lang, at the helm on Lake Zürich"
+              alt="Beat Lang — founder of Segelschule Lang"
               loading="lazy"
-              className="w-full aspect-[16/10] object-cover"
+              className="w-full aspect-[3/2] object-cover"
             />
             <p className="mt-3 text-[11px] uppercase tracking-[0.2em] text-navy/50">
               Beat Lang · Founder
@@ -139,33 +150,43 @@ function Index() {
       </section>
 
       {/* Exam overview */}
-      <section className="bg-sand py-24 md:py-28 px-6 md:px-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
-            Sailing courses Zürichsee
-          </span>
-          <h2 className="font-serif text-2xl md:text-4xl mt-5 mb-8 leading-tight">
-            Boat license Switzerland — cheap, for dummies and beginners.
-          </h2>
-          <p className="text-navy/75 leading-relaxed mb-6 text-[15px]">
-            To get to the exam qualification you need approx. 20 units (1.5 h) including the exam.
-            You need to absolve a theoretical part and the practical part. We help you through both
-            of the exam.
-          </p>
-          <p className="text-navy/75 leading-relaxed text-[15px]">
-            For quick certified sailing lessons, Segelschule Lang will plan the approach to your
-            course to suite your personal needs.
-          </p>
+      <section className="bg-sand py-24 md:py-28 px-6 md:px-12">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-[1.2fr_1fr] gap-12 md:gap-16 items-center">
+          <div>
+            <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
+              Sailing courses Zürichsee
+            </span>
+            <h2 className="font-serif text-2xl md:text-4xl mt-5 mb-8 leading-tight">
+              Boat license Switzerland — cheap, for dummies and beginners.
+            </h2>
+            <p className="text-navy/75 leading-relaxed mb-6 text-[15px]">
+              To get to the exam qualification you need approx. 20 units (1.5 h) including the exam.
+              You need to absolve a theoretical part and the practical part. We help you through both
+              of the exam.
+            </p>
+            <p className="text-navy/75 leading-relaxed text-[15px]">
+              For quick certified sailing lessons, Segelschule Lang will plan the approach to your
+              course to suite your personal needs.
+            </p>
+          </div>
+          <div>
+            <img
+              src={helmWheelAsset.url}
+              alt="Wooden helm wheel with brass compass on a sailing yacht"
+              loading="lazy"
+              className="w-full aspect-square object-cover"
+            />
+          </div>
         </div>
       </section>
 
       {/* Theory */}
-      <section id="theory" className="py-24 md:py-32 px-6 md:px-10 max-w-5xl mx-auto">
+      <section id="theory" className={`py-24 md:py-32 ${CONTAINER}`}>
         <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
           Step 01
         </span>
         <h2 className="font-serif text-3xl md:text-5xl mt-5 mb-10 leading-tight">Theory</h2>
-        <ul className="space-y-5 text-[15px] text-navy/80 leading-relaxed border-l-2 border-gold pl-6">
+        <ul className="space-y-5 text-[15px] text-navy/80 leading-relaxed border-l-2 border-gold pl-6 max-w-3xl">
           <li>Theory tests are generally written in your residence canton.</li>
           <li>
             Please fulfill the{" "}
@@ -204,8 +225,16 @@ function Index() {
       </section>
 
       {/* One Week Offer */}
-      <section id="week" className="bg-navy text-white py-24 md:py-32 px-6 md:px-10">
-        <div className="max-w-5xl mx-auto">
+      <section id="week" className="relative bg-navy text-white py-24 md:py-32 px-6 md:px-12 overflow-hidden">
+        <img
+          src={sailRopesAsset.url}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover opacity-15"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/95 to-navy/80" />
+        <div className="relative max-w-6xl mx-auto">
           <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
             Step 02
           </span>
@@ -213,7 +242,7 @@ function Index() {
             One Week Offer
           </h2>
 
-          <ul className="space-y-3 text-[15px] text-white/85 mb-12 list-disc pl-5">
+          <ul className={`space-y-3 text-[15px] text-white/85 mb-12 list-disc pl-5 ${NUMS}`}>
             <li>12 units in 9 days</li>
             <li>price incl. insurance (CHF 80.00)</li>
             <li>price incl. organisation of the exam, using of the boat during the exam, crew (CHF 280.00)</li>
@@ -225,7 +254,7 @@ function Index() {
               <h3 className="text-gold uppercase tracking-[0.2em] text-[11px] font-bold mb-4">
                 Basic — 1 lesson compiles to
               </h3>
-              <ul className="space-y-2 text-[15px] text-white/85">
+              <ul className={`space-y-2 text-[15px] text-white/85 ${NUMS}`}>
                 <li>1.5 h (1 student)</li>
                 <li>2.0 h (2 students)</li>
                 <li>2.5 h (3 students)</li>
@@ -235,7 +264,7 @@ function Index() {
               <h3 className="text-gold uppercase tracking-[0.2em] text-[11px] font-bold mb-4">
                 Fixed times
               </h3>
-              <ul className="space-y-2 text-[15px] text-white/85">
+              <ul className={`space-y-2 text-[15px] text-white/85 ${NUMS}`}>
                 <li>Monday – Thursday 8.45 am (9.45 am) and 1.45 pm</li>
                 <li>Friday – Sunday 8.45 am (9.45 am)</li>
               </ul>
@@ -247,7 +276,7 @@ function Index() {
           </div>
 
           <h3 className="text-gold uppercase tracking-[0.2em] text-[11px] font-bold mb-5">Prices</h3>
-          <div className="border border-white/15 mb-14">
+          <div className="border border-white/15 mb-14 bg-navy/40 backdrop-blur-sm">
             <PriceRow label="Intensivcourse (12 lessons in 9 days) for one person" price="CHF 1'499.00" dark />
             <PriceRow label="Intensivcourse (12 lessons in 14 days) for two persons" price="CHF 2'399.00" dark />
             <PriceRow label="Intensivcourse (12 lessons in 21 days) for three persons" price="CHF 3'699.00" dark />
@@ -273,57 +302,60 @@ function Index() {
       </section>
 
       {/* Subscriptions */}
-      <section id="subscriptions" className="py-24 md:py-32 px-6 md:px-10">
-        <div className="max-w-5xl mx-auto">
-          <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
-            Step 03
-          </span>
-          <h2 className="font-serif text-3xl md:text-5xl mt-5 mb-10 leading-tight">
-            Subscriptions
-          </h2>
+      <section id="subscriptions" className={`py-24 md:py-32 ${CONTAINER}`}>
+        <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
+          Step 03
+        </span>
+        <h2 className="font-serif text-3xl md:text-5xl mt-5 mb-10 leading-tight">
+          Subscriptions
+        </h2>
 
-          <h3 className="text-navy font-bold uppercase tracking-[0.2em] text-[11px] mb-4">Basic</h3>
-          <ul className="space-y-2 text-[15px] text-navy/80 mb-12 list-disc pl-5">
-            <li>valid one year</li>
-            <li>price incl. insurance (CHF 80.00)</li>
-            <li>price incl. organisation of the exam, using of the boat during the exam, crew (CHF 280.00)</li>
-            <li>the official costs for the theory and the practical exam are not included</li>
-            <li>the course will take place in Stäfa</li>
-          </ul>
+        <h3 className="text-navy font-bold uppercase tracking-[0.2em] text-[11px] mb-4">Basic</h3>
+        <ul className={`space-y-2 text-[15px] text-navy/80 mb-12 list-disc pl-5 ${NUMS}`}>
+          <li>valid one year</li>
+          <li>price incl. insurance (CHF 80.00)</li>
+          <li>price incl. organisation of the exam, using of the boat during the exam, crew (CHF 280.00)</li>
+          <li>the official costs for the theory and the practical exam are not included</li>
+          <li>the course will take place in Stäfa</li>
+        </ul>
 
-          <h3 className="text-gold uppercase tracking-[0.2em] text-[11px] font-bold mb-5">
-            Price for one person
-          </h3>
-          <div className="border border-navy/15 mb-12">
-            <PriceRow label="12 units (1.5 h) Monday – Thursday – 17.00 h" price="CHF 1'699.00" />
-            <PriceRow label="12 units (1.5 h) Monday – Thursday as from 17.00 h and weekends" price="CHF 1'899.00" />
-            <PriceRow label="Additional unit (1.5 h)" price="CHF 150.00" last />
+        <div className="grid md:grid-cols-2 gap-10 mb-12">
+          <div>
+            <h3 className="text-gold uppercase tracking-[0.2em] text-[11px] font-bold mb-5">
+              Price for one person
+            </h3>
+            <div className="border border-navy/15">
+              <PriceRow label="12 units (1.5 h) Monday – Thursday – 17.00 h" price="CHF 1'699.00" />
+              <PriceRow label="12 units (1.5 h) Monday – Thursday as from 17.00 h and weekends" price="CHF 1'899.00" />
+              <PriceRow label="Additional unit (1.5 h)" price="CHF 150.00" last />
+            </div>
           </div>
-
-          <h3 className="text-gold uppercase tracking-[0.2em] text-[11px] font-bold mb-5">
-            Price for two persons
-          </h3>
-          <div className="border border-navy/15 mb-12">
-            <PriceRow label="12 units (2 h) Monday – Thursday – 17.00 h" price="CHF 2'499.00" />
-            <PriceRow label="12 units (2 h) Monday – Thursday as from 17.00 h and weekends" price="CHF 2'699.00" />
-            <PriceRow label="Additional unit (2 h)" price="CHF 200.00" last />
+          <div>
+            <h3 className="text-gold uppercase tracking-[0.2em] text-[11px] font-bold mb-5">
+              Price for two persons
+            </h3>
+            <div className="border border-navy/15">
+              <PriceRow label="12 units (2 h) Monday – Thursday – 17.00 h" price="CHF 2'499.00" />
+              <PriceRow label="12 units (2 h) Monday – Thursday as from 17.00 h and weekends" price="CHF 2'699.00" />
+              <PriceRow label="Additional unit (2 h)" price="CHF 200.00" last />
+            </div>
           </div>
-
-          <h3 className="text-navy font-bold uppercase tracking-[0.2em] text-[11px] mb-4">
-            Conditions
-          </h3>
-          <ul className="space-y-3 text-[14px] text-navy/70 list-disc pl-5 leading-relaxed">
-            <li>Payment of the abonnement is not refundable</li>
-            <li>the fixed lessons are definitive and take place at any weather</li>
-            <li>the school can cancel lessons on place because of stormwarning</li>
-            <li>the student can cancel the lessons at latest 48 hours before it takes place</li>
-          </ul>
         </div>
+
+        <h3 className="text-navy font-bold uppercase tracking-[0.2em] text-[11px] mb-4">
+          Conditions
+        </h3>
+        <ul className="space-y-3 text-[14px] text-navy/70 list-disc pl-5 leading-relaxed">
+          <li>Payment of the abonnement is not refundable</li>
+          <li>the fixed lessons are definitive and take place at any weather</li>
+          <li>the school can cancel lessons on place because of stormwarning</li>
+          <li>the student can cancel the lessons at latest 48 hours before it takes place</li>
+        </ul>
       </section>
 
       {/* Individual lessons */}
-      <section id="individual" className="bg-sand py-24 md:py-32 px-6 md:px-10">
-        <div className="max-w-5xl mx-auto">
+      <section id="individual" className="bg-sand py-24 md:py-32 px-6 md:px-12">
+        <div className="max-w-6xl mx-auto">
           <span className="text-gold font-bold uppercase tracking-[0.25em] text-xs">
             Step 04
           </span>
@@ -341,8 +373,16 @@ function Index() {
       </section>
 
       {/* Footer / Contact */}
-      <footer className="bg-navy text-white pt-20 pb-10 px-6 md:px-10">
-        <div className="max-w-5xl mx-auto text-center border-b border-white/10 pb-16">
+      <footer className="relative bg-navy text-white pt-20 pb-10 px-6 md:px-12 overflow-hidden">
+        <img
+          src={lakeSunsetAsset.url}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover opacity-25"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/90 via-navy/80 to-navy" />
+        <div className="relative max-w-6xl mx-auto text-center border-b border-white/10 pb-16">
           <h2 className="font-serif text-3xl md:text-5xl mb-10 leading-tight">
             And now get in touch with us.
           </h2>
@@ -353,7 +393,7 @@ function Index() {
             <p>Wassersport &amp; Reise GmbH</p>
             <p>Dorfstrasse 33, 8849 Alpthal</p>
             <p>
-              <a href="tel:+41449281818" className="hover:text-gold transition-colors">
+              <a href="tel:+41449281818" className={`hover:text-gold transition-colors ${NUMS}`}>
                 +41 44 928 18 18
               </a>
             </p>
@@ -370,7 +410,7 @@ function Index() {
             Email us
           </a>
         </div>
-        <div className="max-w-5xl mx-auto pt-8 flex flex-col md:flex-row gap-4 justify-between items-center text-[10px] uppercase tracking-[0.25em] text-white/40">
+        <div className={`relative max-w-6xl mx-auto pt-8 flex flex-col md:flex-row gap-4 justify-between items-center text-[10px] uppercase tracking-[0.25em] text-white/40 ${NUMS}`}>
           <div>© 1982–2026 Wassersport &amp; Reise GmbH</div>
           <div>sail.ch · Stäfa &amp; Zurich</div>
         </div>
@@ -398,7 +438,9 @@ function PriceRow({
     >
       <span className={`text-[14px] ${dark ? "text-white/85" : "text-navy/80"}`}>{label}</span>
       <span
-        className={`font-serif text-lg ${dark ? "text-gold" : "text-navy"} whitespace-nowrap`}
+        className={`font-sans font-semibold text-base tabular-nums [font-feature-settings:'tnum','lnum'] ${
+          dark ? "text-gold" : "text-navy"
+        } whitespace-nowrap`}
       >
         {price}
       </span>
