@@ -124,17 +124,18 @@ function Index() {
               license).
             </p>
           </div>
-          <figure className="relative">
+          <figure className="relative md:self-center w-full">
             <img
               src={beatLangAsset.url}
               alt="Beat Lang — founder of Segelschule Lang"
               loading="lazy"
-              className="w-full h-full max-h-[640px] aspect-[3/4] object-cover object-center"
+              className="w-full aspect-[4/5] max-h-[460px] object-cover object-center"
             />
             <figcaption className="mt-3 text-[11px] uppercase tracking-[0.2em] text-navy/50">
               Beat Lang · Founder
             </figcaption>
           </figure>
+
         </div>
       </section>
 
