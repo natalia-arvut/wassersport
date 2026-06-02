@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImage from "@/assets/hero-lake-zurich.jpg";
-import beatLangAsset from "@/assets/beat-lang.jpg.asset.json";
-import lakeSunsetAsset from "@/assets/lake-sunset-sails.jpg.asset.json";
-import sailRopesAsset from "@/assets/sail-ropes-detail.jpg.asset.json";
-import helmWheelAsset from "@/assets/helm-wheel.jpg.asset.json";
+import beatLangImage from "@/assets/beat-lang.jpg";
+import lakeSunsetImage from "@/assets/lake-sunset-sails.jpg";
+import sailRopesImage from "@/assets/sail-ropes-detail.jpg";
+import helmWheelImage from "@/assets/helm-wheel.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -36,7 +36,7 @@ export const Route = createFileRoute("/")({
 const NUMS = "tabular-nums [font-feature-settings:'tnum','lnum']";
 const CONTAINER = "max-w-[1240px] mx-auto px-6 md:px-10 lg:px-12";
 
-function Index() {
+export function Index() {
   return (
     <div className="min-h-screen bg-background text-navy">
 
@@ -126,7 +126,7 @@ function Index() {
           </div>
           <figure className="relative min-h-[320px] overflow-hidden md:min-h-0">
             <img
-              src={beatLangAsset.url}
+              src={beatLangImage}
               alt="Beat Lang — founder of Segelschule Lang"
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover object-center"
@@ -210,7 +210,7 @@ function Index() {
           </div>
           <figure className="relative min-h-[320px] overflow-hidden md:min-h-0">
             <img
-              src={helmWheelAsset.url}
+              src={helmWheelImage}
               alt="Wooden helm wheel with brass compass on a sailing yacht"
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover"
@@ -222,7 +222,7 @@ function Index() {
       {/* One Week Offer */}
       <section id="week" className="relative bg-navy text-white py-24 md:py-32 overflow-hidden">
         <img
-          src={sailRopesAsset.url}
+          src={sailRopesImage}
           alt=""
           aria-hidden="true"
           loading="lazy"
@@ -370,7 +370,7 @@ function Index() {
       {/* Footer / Contact */}
       <footer className="relative bg-navy text-white pt-20 pb-10 overflow-hidden">
         <img
-          src={lakeSunsetAsset.url}
+          src={lakeSunsetImage}
           alt=""
           aria-hidden="true"
           loading="lazy"
